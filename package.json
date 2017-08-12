@@ -1,0 +1,70 @@
+{
+  "name": "predominant-colors-api",
+  "description": "Get predominant colors from an URL image",
+  "homepage": "https://documentup.com/Kikobeats/predominant-colors-api",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "author": {
+    "name": "Kiko Beats",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/predominant-colors-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/predominant-colors-api/issues"
+  },
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "~1.17.2",
+    "boxen": "~1.2.1",
+    "compression": "~1.7.0",
+    "cors": "~2.8.4",
+    "express": "~4.15.4",
+    "express-status-monitor": "~1.0.0",
+    "helmet": "~3.8.1",
+    "ip": "~1.1.5",
+    "jsendp": "~1.2.0",
+    "morgan": "~1.8.2",
+    "splashy": "~1.0.0",
+    "swagpi": "~0.1.1"
+  },
+  "devDependencies": {
+    "coveralls": "latest",
+    "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier-standard": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard-markdown && standard",
+    "precommit": "lint-staged",
+    "precommit-lint": "prettier-standard",
+    "prelint": "npm run pretty",
+    "pretest": "npm run lint",
+    "pretty": "prettier-standard {core,test,bin}/**/*.js",
+    "test": "exit 0",
+    "dev": "nodemon --exec \"npm start\" -e \"js\""
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "precommit-lint",
+      "git add"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
