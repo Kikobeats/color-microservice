@@ -1,4 +1,4 @@
-# predominant-colors-api
+# color-microservice
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/predominant-colors-api.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/predominant-colors-api/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/predominant-colors-api)
