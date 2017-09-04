@@ -16,7 +16,12 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/color-microservice/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "microservice",
+    "color",
+    "dominant",
+    "predominant"
+  ],
   "dependencies": {
     "body-parser": "~1.17.2",
     "compression": "~1.7.0",

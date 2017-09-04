@@ -7,6 +7,8 @@
 [![NPM Status](https://img.shields.io/npm/dm/color-microservice.svg?style=flat-square)](https://www.npmjs.org/package/color-microservice)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 > Get predominant colors from an URL image microservice.
 
 ## Related

@@ -1,0 +1,11 @@
+{
+  "name": "color-microservice",
+  "description": "Get predominant colors from an URL image",
+  "repository": "https://github.com/Kikobeats/color-microservice",
+  "keywords": [
+    "microservice",
+    "color",
+    "dominant",
+    "predominant"
+  ],
+}
