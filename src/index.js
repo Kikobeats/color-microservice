@@ -1,7 +1,8 @@
 'use strict'
 
+const colorableDominant = require('colorable-dominant')
 const bodyParser = require('body-parser')
-const splashy = require('splashy')
+const splashy = require('splashy')()
 const help = require('./help')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -20,12 +21,13 @@ module.exports = (app, express) => {
     .disable('x-powered-by')
 
   app.get('/', async function (req, res) {
-    const { url, paletteColors } = req.query
+    const { url } = req.query
     if (!url) return res.success(help)
 
     try {
-      const data = await splashy.fromUrl(url, { paletteColors })
-      return res.success(data)
+      const palette = await splashy.fromUrl(url)
+      const dominant = colorableDominant(palette)
+      return res.success(Object.assign({}, { palette }, dominant))
     } catch (err) {
       return res.error(err.message || err)
     }

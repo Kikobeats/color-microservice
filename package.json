@@ -23,15 +23,16 @@
     "predominant"
   ],
   "dependencies": {
-    "body-parser": "~1.17.2",
+    "body-parser": "~1.18.2",
+    "colorable-dominant": "~1.0.0",
     "compression": "~1.7.0",
     "cors": "~2.8.4",
-    "express": "~4.15.4",
+    "express": "~4.16.2",
     "express-status-monitor": "~1.0.0",
-    "helmet": "~3.8.1",
+    "helmet": "~3.9.0",
     "jsendp": "~1.2.0",
-    "morgan": "~1.8.2",
-    "splashy": "~1.0.0"
+    "morgan": "~1.9.0",
+    "splashy": "~2.0.1"
   },
   "devDependencies": {
     "coveralls": "latest",
@@ -62,8 +63,8 @@
   "license": "MIT",
   "lint-staged": {
     "*.js": [
-      "git add",
-      "precommit-lint"
+      "precommit-lint",
+      "git add"
     ]
   },
   "standard": {
