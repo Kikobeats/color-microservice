@@ -9,7 +9,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-> Get predominant colors from an URL image microservice.
+> Get color information from any URL image microservice.
 
 ## Related
 
