@@ -14,6 +14,7 @@
 ## Related
 
 - [splashy](https://github.com/kikobeats/splashy): Given an image, extract predominant & palette colors.
+- [colorable-dominant](https://github.com/Kikobeats/colorable-dominant) – Create ARIA-compliant color themes based on a predominant color palette.
 
 ## License
 
