@@ -22,14 +22,14 @@ module.exports = (app, express) => {
 
   app.get('/', async function (req, res) {
     const { url } = req.query
-    if (!url) return res.success(help)
+    if (!url) return res.success({ data: help })
 
     try {
       const palette = await splashy.fromUrl(url)
       const dominant = colorableDominant(palette)
-      return res.success(Object.assign({}, { palette }, dominant))
+      return res.success({ data: Object.assign({}, { palette }, dominant) })
     } catch (err) {
-      return res.error(err.message || err)
+      return res.error({ message: err.message || err })
     }
   })
 
