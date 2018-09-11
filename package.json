@@ -40,7 +40,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "prettier-standard": "latest",
-    "standard": "latest",
+    "standard": "11",
     "standard-markdown": "latest",
     "svr": "latest"
   },
@@ -51,7 +51,7 @@
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr src/index.js",
-    "lint": "standard-markdown && standard",
+    "lint": "standard-markdown README.md && standard",
     "precommit": "lint-staged",
     "precommit-lint": "prettier-standard",
     "prelint": "npm run pretty",
