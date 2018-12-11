@@ -32,7 +32,7 @@
     "helmet": "~3.15.0",
     "jsendp": "~2.0.0",
     "morgan": "~1.9.0",
-    "splashy": "~2.0.1"
+    "splashy": "~3.0.0"
   },
   "devDependencies": {
     "coveralls": "latest",
@@ -51,9 +51,7 @@
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr src/index.js",
-    "lint": "standard-markdown README.md && standard",
-    "precommit": "lint-staged",
-    "precommit-lint": "prettier-standard",
+    "lint": "standard-markdown && standard",
     "prelint": "npm run pretty",
     "pretest": "npm run lint",
     "pretty": "prettier-standard {core,test,bin}/**/*.js",
@@ -63,7 +61,7 @@
   "license": "MIT",
   "lint-staged": {
     "*.js": [
-      "precommit-lint",
+      "prettier-standard",
       "git add"
     ]
   },
@@ -71,5 +69,10 @@
     "env": [
       "mocha"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

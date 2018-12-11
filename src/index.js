@@ -2,7 +2,7 @@
 
 const colorableDominant = require('colorable-dominant')
 const bodyParser = require('body-parser')
-const splashy = require('splashy')()
+const splashy = require('splashy')
 const help = require('./help')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -25,7 +25,7 @@ module.exports = (app, express) => {
     if (!url) return res.success({ data: help })
 
     try {
-      const palette = await splashy.fromUrl(url)
+      const palette = await splashy.url(url)
       const dominant = colorableDominant(palette)
       return res.success({ data: Object.assign({}, { palette }, dominant) })
     } catch (err) {
