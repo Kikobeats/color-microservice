@@ -1,8 +1,9 @@
 'use strict'
 
 const colorableDominant = require('colorable-dominant')
-const bodyParser = require('body-parser')
 const splashy = require('splashy')
+const got = require('got')
+
 const help = require('./help')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -14,8 +15,6 @@ module.exports = (app, express) => {
     .use(require('cors')())
     .use(require('jsendp')())
     .use(require('express-status-monitor')())
-    .use(bodyParser.urlencoded({ extended: true }))
-    .use(bodyParser.json())
     .use(require('morgan')(isProduction ? 'combined' : 'dev'))
     .use(express.static('static'))
     .disable('x-powered-by')
@@ -25,7 +24,8 @@ module.exports = (app, express) => {
     if (!url) return res.success({ data: help })
 
     try {
-      const palette = await splashy.url(url)
+      const { body } = await got(url, { encoding: null })
+      const palette = await splashy(body)
       const dominant = colorableDominant(palette)
       return res.success({ data: Object.assign({}, { palette }, dominant) })
     } catch (err) {
