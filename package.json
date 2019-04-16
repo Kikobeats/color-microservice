@@ -27,7 +27,7 @@
     "compression": "~1.7.0",
     "cors": "~2.8.4",
     "express": "~4.16.2",
-    "express-status-monitor": "~1.2.0",
+    "express-status-monitor": "~1.2.5",
     "got": "~9.6.0",
     "helmet": "~3.16.0",
     "jsendp": "~2.1.0",
