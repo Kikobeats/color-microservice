@@ -52,9 +52,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr src/index.js",
     "lint": "standard-markdown && standard",
-    "prelint": "npm run pretty",
     "pretest": "npm run lint",
-    "pretty": "prettier-standard {core,test,bin}/**/*.js",
     "start": "node src/server.js",
     "test": "exit 0"
   },
